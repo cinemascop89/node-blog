@@ -1,0 +1,13 @@
+extends base
+
+block content
+  h2 Create new post
+  form(method="post", action="/new")
+    p
+      label(for="title") Title
+      input(type="text", name="title")
+    p
+      label(for="content") Post
+      textarea(name="content")
+    p
+      input(type="submit", value="Post")

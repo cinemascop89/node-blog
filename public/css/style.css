@@ -1,0 +1,68 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica;
+    color: #404040;
+}
+
+h1, h2 {
+}
+
+h1 {
+    padding: 0 0 15px;
+    text-align: center;
+    font-size: 70px;
+}
+
+h2 {
+    font-size: 52px;
+    margin: 0 10px;
+}
+
+h2 a, h1 a {
+    text-decoration: none;
+    color: inherit;
+}
+
+article {
+    margin: 0 0 20px;
+}
+
+a:hover {
+    color: #00BF03;
+}
+
+.content {
+    font-size: 14px;
+    line-height: 20px;
+    padding-left: 30px;
+    margin-top: 10px;
+}
+
+.wrap {
+    width: 760px;
+    margin: 0 auto;
+}
+
+.new-post {
+    width: 100%;
+    text-align: right;
+    margin: 5px 0 0 0;
+    padding-right:: 6px;
+}
+
+label {
+    width: 100%;
+    display: block;
+}
+input[type=text]{
+    width: 400px;
+    font-family: Helvetica;
+    border: 1px solid #D1D1D1;
+}
+
+textarea {
+    width: 400px;
+    font-family: Helvetica;
+    border: 1px solid #D1D1D1;
+}
