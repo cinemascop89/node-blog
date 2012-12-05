@@ -24,12 +24,12 @@
     });
 
 
-!SLIDE center
+!SLIDE center incremental
 
 #Que *no es* node? #
 
-* Framework de desarrollo web
 * Para aplicaciones con alto consumo de CPU
+* Framework de desarrollo web
 
 
 !SLIDE center incremental
@@ -58,10 +58,11 @@
 
     @@@ javascript
     var http = require('http');
-    http.createServer(function (req, res) {
-      res.writeHead(200, {'Content-Type': 'text/plain'});
+    var server = http.createServer(function(req, res){
+      res.writeHead(200, {'Content-Type':'text/plain'});
       res.end('Hello World\n');
-    }).listen(1337, '127.0.0.1');
+    });
+    server.listen(1337, '127.0.0.1');
 
 
 Lo corremos con ```node app.js```
@@ -87,8 +88,9 @@ Similar a Flask o Sinatra
     var express = require("express");
     var app = express();
     app.get("/new", function(req, res){
-      return "Hello, world!";
+      res.send("Hello, world!");
     });
+    app.listen(3000);
 
 
 !SLIDE small
@@ -105,7 +107,7 @@ Similar a Flask o Sinatra
 
 #Mongoose #
 
-###ODM (Object Document Mapper para mongodb)
+###ODM (Object Document Mapper) para mongodb
 
 Schemas
 
