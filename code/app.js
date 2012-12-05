@@ -28,7 +28,8 @@ app.get("/", function(req, res){
 
 //post detail handler
 app.get("/post/:postId", function(req, res){
-    models.Post.findById(req.params.postId).exec(function(err, post){
+    var postId = req.params.postId;
+    models.Post.findById(postId).exec(function(err, post){
         res.render("detail", {
             title: post.title + " - My blog", 
             post: post,
