@@ -16,10 +16,10 @@
 
 !SLIDE small
 
-#Ejemplo de codigo: #
+#Estilo de programacion: #
 
     @@@ javascript
-    Post.find(id, function(post){
+    Post.find(id, function(error, post){
         console.log(post);
     });
 
@@ -30,27 +30,6 @@
 
 * Para aplicaciones con alto consumo de CPU
 * Framework de desarrollo web
-
-
-!SLIDE center incremental
-
-#Para eso tenemos... #
-
-* Express (framework / router)
-* Mongoose (ODM para mongo)
-* Jade (templates)
-
-
-!SLIDE center
-
-#Instalar node #
-
-* Windows: instalador
-* Ubuntu: ```sudo apt-get install node```
-* Otros: bajar codigo -> ```./configure && make```
-
-[http://nodejs.org/download/](http://nodejs.org/download/)
-
 
 !SLIDE small
 
@@ -70,14 +49,26 @@ Lo corremos con ```node app.js```
 
 !SLIDE center
 
+#Instalar node #
+
+* Ubuntu: ```sudo apt-get install node```
+* Windows: instalador
+* Otros: bajar codigo -> ```./configure && make```
+
+[http://nodejs.org/download/](http://nodejs.org/download/)
+
+
+!SLIDE center
+
 #Express #
 
 ###"web application framework for node" ###
 
-Framework minimalista y flexible para aplicaciones en node
+* Framework minimalista y flexible para aplicaciones en node
 
-Similar a Flask o Sinatra
+* Similar a Flask o Sinatra
 
+* Se instala con ```$ npm install express```
 
 
 !SLIDE small
@@ -101,6 +92,15 @@ Similar a Flask o Sinatra
     app.use(express.static(__dirname + "/public"));
     app.set("views", __dirname + "/views");
     app.set("view engine", "jade");
+
+
+!SLIDE center
+
+#Mongodb #
+
+"*MongoDB (from "humongous") is a scalable, high-performance, open source NoSQL database. Written in C++*"
+
+[http://mongodb.org/](http://www.mongodb.org/)
 
 
 !SLIDE small
@@ -225,10 +225,26 @@ se convierte en ...
     });
 
 
-!SLIDE center
+!SLIDE center incremental
+
+#En resumen... #
+
+* Express: framework / router
+* Mongoose: ODM para mongo
+* Jade: templates
+
+
+!SLIDE center small
 
 #Algunos numeros
 
+* ```$ ab -n 1000 -c 1000 http://127.0.0.1:3000/```
+
+  * 260 req/s
+  * completado en ~3 segundos
+
+* ```$ ab -n 10000 -c 10000 http://127.0.0.1:3000/```
+  * hacer...
 
 !SLIDE small
 
